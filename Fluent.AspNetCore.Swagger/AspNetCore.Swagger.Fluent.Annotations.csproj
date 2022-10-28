@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Company>Fredy Adriano Jiménez Martínez</Company>
+    <Description>Swagger Fluent Annotations</Description>
+    <PackageTags>AspNetCore.Swagger.Fluent.Annotations, AspNetCore.Swagger, Swagger.Fluent.Annotations, Fluent.Swagger</PackageTags>
+    <Authors>Fredy Adriano Jiménez Martínez</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
+  </ItemGroup>
+
+</Project>
