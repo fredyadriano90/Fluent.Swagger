@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Fluent.AspNetCore.Swagger.Filters;
 
-public class GetSchemaMethodFilter : ISchemaFilter
+public class FluentAnnotationsFilter : ISchemaFilter
 {
 	/// <summary>
 	/// Assignment mappings.
@@ -42,16 +42,16 @@ public class GetSchemaMethodFilter : ISchemaFilter
 			Patch(schema, newSchema);
 	}
 
+	private static MethodInfo? GetSchemaMethod(Type type)
+	{
+		return type.GetMethod("GetSchema", BindingFlags.Public | BindingFlags.Static);
+	}
+
 	private bool CanBeAssigned(Type targetType, Type sourceType)
 	{
 		return targetType == sourceType
 			|| targetType.IsAssignableFrom(sourceType)
 			|| (_assignmentMappings.ContainsKey(targetType) && _assignmentMappings[targetType].Any(st => sourceType == st));
-	}
-
-	private static MethodInfo? GetSchemaMethod(Type type)
-	{
-		return type.GetMethod("GetSchema", BindingFlags.Public | BindingFlags.Static);
 	}
 
 	private void Patch<TTarget, TSource>(TTarget target, TSource source)

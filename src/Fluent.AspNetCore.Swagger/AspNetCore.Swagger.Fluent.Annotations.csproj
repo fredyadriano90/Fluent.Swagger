@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<Company>Fredy Adriano Jiménez Martínez</Company>
 		<Description>Swagger Fluent Annotations</Description>
 		<PackageTags>AspNetCore.Swagger.Fluent.Annotations, AspNetCore.Swagger, Swagger.Fluent.Annotations, Fluent.Swagger</PackageTags>
@@ -19,6 +19,9 @@
 		<RepositoryType>git</RepositoryType>
 		<IncludeSymbols>True</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageReleaseNotes>Create AddFluentAnnotations extension method
+
+Rename GetSchemaMethodFilter to FluentAnnotationsFilter</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>

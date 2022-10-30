@@ -1,21 +1,13 @@
-﻿using Fluent.AspNetCore.Swagger.Enums;
+﻿using AspNetCore.Swagger.Fluent.Annotations.Options;
+using Fluent.AspNetCore.Swagger.Enums;
 
 namespace Fluent.AspNetCore.Swagger;
-
-public class SwaggerConfigurationOptions
-{
-	public NamingConvention NamingConvention { get; set; }
-
-	public virtual void Freeze() => IsFrozen = true;
-
-	public virtual bool IsFrozen { get; private set; }
-}
 
 public sealed class SwaggerConfiguration
 {
 	private SwaggerConfiguration()
 	{
-		Options = new SwaggerConfigurationOptions()
+		Options = new FluentAnnotationsOptions()
 		{
 			NamingConvention = NamingConvention.CamelCase
 		};
@@ -23,9 +15,9 @@ public sealed class SwaggerConfiguration
 
 	public static SwaggerConfiguration Instance { get; } = new SwaggerConfiguration();
 
-	public SwaggerConfigurationOptions Options { get; }
+	public FluentAnnotationsOptions Options { get; }
 
-	public void AddConfiguration(Action<SwaggerConfigurationOptions> onConfiguring)
+	public void AddConfiguration(Action<FluentAnnotationsOptions> onConfiguring)
 	{
 		if (Options.IsFrozen) return;
 
