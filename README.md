@@ -29,7 +29,7 @@
 
 3. Use it in your models
 
-```csharp
+    ```csharp
     public class LoginResponse
     {
         public bool AllowRememberLogin { get; set; }
@@ -78,4 +78,4 @@
                         new StringSchema().Description("Authentication Scheme").Required().Readonly()));
         }
     }
-```
+    ```
