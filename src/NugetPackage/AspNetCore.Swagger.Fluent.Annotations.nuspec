@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+	<metadata>
+		<id>AspNetCore.Swagger.Fluent.Annotations</id>
+		<version>1.0.4</version>
+		<title>Swagger Fluent Annotations</title>
+		<authors>Fredy Adriano Jiménez Martínez</authors>
+		<owners></owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="file">LICENSE.txt</license>
+		<icon>images\icon.png</icon>
+		<readme>docs\README.md</readme>
+		<projectUrl>https://github.com/fredyadriano90/Fluent.Swagger</projectUrl>
+		<description>Swagger Fluent Annotations</description>
+		<releaseNotes></releaseNotes>
+		<tags>AspNetCore.Swagger.Fluent.Annotations, AspNetCore.Swagger, Swagger.Fluent.Annotations, Fluent.Swagger</tags>
+		<repository type="git" url="https://github.com/fredyadriano90/Fluent.Swagger" branch="master" />
+
+		<dependencies>
+			<group targetFramework="net6.0">
+				<dependency id="Swashbuckle.AspNetCore.SwaggerGen" version="6.4.0" exclude="Build,Analyzers" />
+			</group>
+
+			<group targetFramework="net5.0">
+				<dependency id="Swashbuckle.AspNetCore.SwaggerGen" version="6.4.0" exclude="Build,Analyzers" />
+			</group>
+
+			<group targetFramework="netcoreapp3.1">
+				<dependency id="Swashbuckle.AspNetCore.SwaggerGen" version="6.4.0" exclude="Build,Analyzers" />
+			</group>
+
+			<group targetFramework="netstandard2.0">
+				<dependency id="Swashbuckle.AspNetCore.SwaggerGen" version="6.4.0" exclude="Build,Analyzers" />
+			</group>
+		</dependencies>
+
+	</metadata>
+	<files>
+		<file src="..\..\LICENSE.txt" target="" />
+		<file src="icon.png" target="images\" />
+		<file src="..\..\README.md" target="docs\" />
+
+		<file src="..\net6.0\bin\Release\net6.0\*.dll" target="lib\net6.0" />
+		<file src="..\net6.0\bin\Release\net6.0\*.pdb" target="lib\net6.0" />
+		
+		<file src="..\net5.0\bin\Release\net5.0\*.dll" target="lib\net5.0" />
+		<file src="..\net5.0\bin\Release\net5.0\*.pdb" target="lib\net5.0" />
+		
+		<file src="..\NETCoreApp3.0\bin\Release\netcoreapp3.1\*.dll" target="lib\netcoreapp3.1" />
+		<file src="..\NETCoreApp3.0\bin\Release\netcoreapp3.1\*.pdb" target="lib\netcoreapp3.1" />
+		
+		<file src="..\NETStandard2.0\bin\Release\netstandard2.0\*.dll" target="lib\netstandard2.0" />
+		<file src="..\NETStandard2.0\bin\Release\netstandard2.0\*.pdb" target="lib\netstandard2.0" />
+	</files>
+</package>
